@@ -1,46 +1,54 @@
 import Link from "next/link";
-import SerchForm from "./SerchForm";
+import SearchForm from "./SearchForm";
+
 
 export default function Topbar() {
   return (
-    <div className="flex items-center justify-between bg-gray-900 h-20 px-20">
+    <div className="flex items-center justify-between h-20 px-20">
     
         {/* ホームページ */}
         <Link
             href="/"
             className="
-                text-3xl
-                font-bold
+                text-2xl
+                font-extrabold
+                tracking-wide
+                hover:opacity-80
+                transition
             "
         >
-            ECサイト
+            NNEC
         </Link>
 
         {/* 検索フォーム */}
-        <SerchForm />
+        <div className="w-2/5">
+        <SearchForm />
+        </div>
 
 
         {/* ショップページ */}
+     <div className="flex gap-10">
         <Link
-            href="/shop"
+            href="/login"
             className="
-                text-3xl
+                text-2xl
                 font-bold
             "
         >
-            Shop    
+            ログイン    
         </Link>
 
         {/* カートページ */}
         <Link
             href="/cart"
             className="
-                text-3xl
+                text-2xl
                 font-bold
             "
         >
-            Cart
-        </Link>    
+            カート
+        </Link>
+     </div>    
 
     </div>
     )
