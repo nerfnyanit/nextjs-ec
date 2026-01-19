@@ -13,5 +13,15 @@
         "id": 3,
         "name": "apple",
         "price": 200000
+    },
+    {
+        "id": 4,
+        "name": "keyboard",
+        "price": 12000
+    },
+    {
+        "id": 5,
+        "name": "洗剤",
+        "price": 800
     }
 ]

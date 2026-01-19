@@ -12,6 +12,7 @@ type Item = {
 type ItemContextType = {
     items: Item[]
     addItem: (item: Omit<Item, "quantity">) => void
+    removeItem: (id: number) => void 
 }
 
 const ItemContext = createContext<ItemContextType | undefined>(undefined)
@@ -35,8 +36,12 @@ export function ItemProvider({ children}: {children: React.ReactNode}) {
         })
     }
 
+    const removeItem = (id:number) => {
+        setItems((prev) => prev.filter((item) => item.id !== id))
+    }
+
   return (
-        <ItemContext.Provider value={{ items, addItem}}>
+        <ItemContext.Provider value={{ items, addItem, removeItem}}>
             {children}
         </ItemContext.Provider>
   )

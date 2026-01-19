@@ -4,7 +4,8 @@ import SearchForm from "./SearchForm";
 
 export default function Topbar() {
   return (
-    <div className="flex items-center justify-between h-20 px-20">
+ <div className="flex justify-center bg-white">
+    <div className="w-full max-w-6xl flex items-center justify-between h-25 px-4">
     
         {/* ホームページ */}
         <Link
@@ -21,9 +22,9 @@ export default function Topbar() {
         </Link>
 
         {/* 検索フォーム */}
-        <div className="w-2/5">
+     <div className="w-2/5">
         <SearchForm />
-        </div>
+     </div>
 
 
         {/* ショップページ */}
@@ -48,8 +49,9 @@ export default function Topbar() {
         >
             カート
         </Link>
-     </div>    
+     </div>
 
     </div>
+  </div>
     )
 }
